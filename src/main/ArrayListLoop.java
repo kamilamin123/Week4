@@ -10,13 +10,14 @@ public class ArrayListLoop {
         for(int i=0; i < 5; i++) {
             arr.add(i);
         }
-         for(int i = arr.size()-1; i>=0; i--) {//the for loop iterate but the size change every time because of the remove 
-             if (i % 2 == 0) {
-                 System.out.println("Removing element " + i + " : " + arr.get(i));
-                 arr.remove(i);
-             }
-         }
-       
+       int i;
+        for(i=0; i < arr.size(); i++) {//the for loop iterate but the size change every time because of the remove 
+            if (i % 2 == 0) {
+                
+                arr.remove(i);
+            }
+        }
+        arr.remove(i);
         System.out.println(arr);
 
 	}
